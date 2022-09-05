@@ -36,6 +36,9 @@ class ListeTest
     @Test
     void isEmpty()
     {
+        assertEquals(true, liste.isEmpty());
+        liste.insetFromHead(new Node("palle"));
+        assertEquals(false, liste.isEmpty());
     }
 
     @Test
