@@ -57,7 +57,21 @@ class ListeTest
     }
 
     @Test
-    void testPrintFromhead()
+    void hansemand_lückter()
     {
+        liste.insetFromHead(new Node("1"));
+        liste.insetFromHead(new Node("2"));
+        liste.insetFromHead(new Node("3"));
+        liste.insetFromHead(new Node("4"));
+
+        liste.removeFromHead();
+        assertEquals("3 2 1", liste.printFromhead());
+        liste.removeFromHead();
+        liste.removeFromHead();
+        liste.removeFromHead();
+        assertEquals("", liste.printFromhead());
+
+
+
     }
 }
