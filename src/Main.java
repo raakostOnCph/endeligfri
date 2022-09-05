@@ -20,7 +20,7 @@ public class Main {
 
         Liste liste = new Liste();
 
-        liste.printFromhead(n);
+        liste.printFromhead();
 
 
     }

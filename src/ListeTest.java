@@ -1,3 +1,5 @@
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ListeTest
@@ -20,11 +22,39 @@ class ListeTest
         node3.previous = node2;
         node2.previous = node1;
 
-        assertEquals("hej med dig", liste.printFromhead(node1));
+        liste.head = node1;
+        liste.tail = node3;
+
+        assertEquals("hej med dig", liste.printFromhead());
 
 
 
 
 
+    }
+
+    @Test
+    void isEmpty()
+    {
+    }
+
+    @Test
+    void insetFromHead()
+    {
+        liste.insetFromHead(new Node("1"));
+        assertEquals("1", liste.printFromhead());
+        liste.insetFromHead(new Node("2"));
+        liste.insetFromHead(new Node("3"));
+        liste.insetFromHead(new Node("4"));
+
+        assertEquals("4 3 2 1", liste.printFromhead());
+
+
+
+    }
+
+    @Test
+    void testPrintFromhead()
+    {
     }
 }
